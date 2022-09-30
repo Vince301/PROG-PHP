@@ -69,6 +69,12 @@
 	else {
 		echo "Classe conforme" . "<br>";}
 
+	if (empty($_POST['classe'])) { // Champs de la Classe
+		echo "Erreur de classe" . "<br>";
+	}
+	else {
+		echo "GROUPE COLLABORATEUR" . "<br>";}
+	
 
 	$df= fopen('/home/a-derchain/Bureau/liste.pdf','w');  //Met les informations dans un pdf
 	fwrite($df,$_POST['lname'].", ".$_POST['fname'].", ".$_POST['age'].", "
